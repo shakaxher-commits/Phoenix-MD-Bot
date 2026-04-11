@@ -11,9 +11,11 @@ const toBool = (x) => (x && (x.toLowerCase() === 'true' || x.toLowerCase() === '
 const DATABASE_URL = process.env.DATABASE_URL === undefined ? "./database.db" : process.env.DATABASE_URL
 
 module.exports = {
-  //__________________________________________________________________________________________________________________________________________
- // For Enabling Commands Like AUTO_MSG_READ Type true For Disabling Type false  
+   //__________________________________________________________________________________________________________________________________________
+  // 🖥️ For Enabling Commands Like AUTO_MSG_READ Type true For Disabling Type false  
+ // ℹ️ Removed commands like welcome,goodbye,invite, etc and other commands and features that cause whatsapp account/group ban thank you!
 //____________________________________________________________________________________________________________________________________________  
+  //🤖 BOT CONFIGURATION
   SESSION_ID: process.env.SESSION_ID || '',
   STICKER_DATA: process.env.STICKER_DATA || '🎯ᴘʜᴏᴇɴɪx-ᴍᴅ;ᴀʙʜɪꜱʜᴇᴋ ꜱᴜʀᴇꜱʜ🍀',
   ALIVE_DATA: process.env.ALIVE_DATA || '👋 ʜᴇʏ &sender, ɪ ᴍ *ᴘʜᴏᴇɴɪx-ᴍᴅ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ* ᴀʟɪᴠᴇ ɴᴏᴡ!\n\n📌 ᴛʏᴘᴇ *menu* ᴛᴏ ɢᴇᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ.\n\n*ᴘʟᴀᴛꜰᴏʀᴍ:* &platform\n*ʀᴜɴᴛɪᴍᴇ:* &runtime;https://i.ibb.co/tHWJrz3/IMG-20231128-WA0005.jpg',
@@ -22,19 +24,19 @@ module.exports = {
   PREFIX: process.env.PREFIX || '.',
   MODE: process.env.MODE || 'private',
   SUDO: process.env.SUDO || '919074692450, 918157993101',
+  ELEVENLABS_API_KEY: process.env.ELEVENLABS_API_KEY || '',
+  TIMEZONE: process.env.TIMEZONE || "Asia/Kolkata",
+  BOT_LANG: process.env.BOT_LANG || 'EN',
   START_MSG: toBool(process.env.START_MSG || 'true'),
   ERROR_MSG: toBool(process.env.ERROR_MSG || 'true'), 
-  WELCOME_MSG: process.env.WELCOME_MSG || '👋 Hello *@user* Welcome To Our Group *@gname*\n*Total Members:* @count\n*Total Admins:* @admin\n*Group Description:*\n@gdesc @pp',
-  GOODBYE_MSG: process.env.GOODBYE_MSG || '👋 GoodBye *@user* From *@gname*\n*Total Members:* @count @pp',
+
+  //🛜 DEPLOY/HOSTING NAME AND API KEY
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || '',
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || '',
   RENDER_NAME: process.env.RENDER_NAME || '',
   RENDER_API: process.env.RENDER_API || '',
   KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || '',
   KOYEB_API_KEY: process.env.KOYEB_API_KEY || '',
-  ELEVENLABS_API_KEY: process.env.ELEVENLABS_API_KEY || '',
-  TIMEZONE: process.env.TIMEZONE || "Asia/Kolkata",
-  BOT_LANG: process.env.BOT_LANG || 'EN',
   
   //AUTOMATION 🎯
   AUTO_ALWAYS_ONLINE: toBool(process.env.AUTO_ALWAYS_ONLINE || 'false'),
